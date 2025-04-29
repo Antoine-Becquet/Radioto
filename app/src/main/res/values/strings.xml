@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Radioto</string>
+    <string name="station_logo_desc">Logo de la station</string>
 </resources>

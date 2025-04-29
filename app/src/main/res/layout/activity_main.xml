@@ -1,28 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/container"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@android:color/white"> <!-- Ajout d'un fond blanc pour éviter l'écran noir -->
 
-    <!-- RecyclerView pour afficher la liste des stations -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/stationRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:padding="16dp"
-        android:clipToPadding="false"/>
+    <!-- Liste des stations radio en mosaïque -->
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/stationRecyclerView"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@android:color/white"
+    app:layout_constraintBottom_toTopOf="@+id/playerBar"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:padding="8dp"/>
 
-
-
-    <!-- PlayerControlView pour ExoPlayer -->
-    <com.google.android.exoplayer2.ui.PlayerControlView
-        android:id="@+id/playerControlView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+    <!-- Barre du lecteur en bas -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/playerBar"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:background="@android:color/darker_gray"
-        android:visibility="visible"/>
-</RelativeLayout>
+        android:padding="10dp">
+
+        <!-- Logo de la station en cours -->
+        <ImageView
+            android:id="@+id/currentStationLogo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/default_logo"
+            android:contentDescription="Logo de la station en cours"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <!-- Nom de la station en cours -->
+        <TextView
+            android:id="@+id/currentStationName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Nom de la station"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toEndOf="@id/currentStationLogo"
+            app:layout_constraintEnd_toStartOf="@id/playPauseButton"
+            app:layout_constraintTop_toTopOf="@id/currentStationLogo"
+            app:layout_constraintBottom_toBottomOf="@id/currentStationLogo"/>
+
+        <!-- Bouton Lecture/Pause -->
+        <ImageButton
+            android:id="@+id/playPauseButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_play"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/currentStationLogo"
+            app:layout_constraintBottom_toBottomOf="@id/currentStationLogo"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- StyledPlayerView pour ExoPlayer -->
+<com.google.android.exoplayer2.ui.StyledPlayerView
+    android:id="@+id/playerControlView"
+    android:layout_width="0dp"
+    android:layout_height="120dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

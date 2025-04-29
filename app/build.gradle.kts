@@ -48,16 +48,17 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.constraintlayout:constraintlayout:2.2.1")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("com.google.code.gson:gson:2.8.6")
 
     // ExoPlayer pour la lecture audio
-    implementation("com.google.android.exoplayer:exoplayer:2.18.1")
-    implementation("com.google.android.exoplayer:exoplayer-ui:2.18.1")
-    implementation("com.google.android.exoplayer:exoplayer-hls:2.18.1")
-    implementation("com.google.android.exoplayer:exoplayer-dash:2.18.1")
-    implementation("com.google.android.exoplayer:exoplayer-rtsp:2.18.1")
+    implementation("com.google.android.exoplayer:exoplayer:2.19.1")
+    implementation("com.google.android.exoplayer:exoplayer-ui:2.19.1")
+    implementation(libs.exoplayer.hls)
+    implementation(libs.exoplayer.dash)
+    implementation(libs.exoplayer.rtsp)
 
     // CardView pour afficher les tuiles de station
-    implementation("androidx.cardview:cardview:1.0.0")
+    implementation(libs.androidx.cardview)
 
     // Dépendances Compose (Mise à jour pour compatibilité avec Kotlin 1.9.21)
     implementation(platform("androidx.compose:compose-bom:2023.05.01"))
@@ -67,7 +68,7 @@ dependencies {
     implementation("androidx.compose.material3:material3")
 
     // Dépendances Android Auto
-    implementation("androidx.car.app:app:1.2.0")
+    implementation("androidx.car.app:app:1.4.0")
 
     // Dépendances de test
     testImplementation("junit:junit:4.13.2")

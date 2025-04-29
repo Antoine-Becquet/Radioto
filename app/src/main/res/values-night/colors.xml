@@ -8,4 +8,5 @@
     <color name="tile_background">#424242</color>
     <color name="black">#000000</color> <!-- Fond totalement noir en mode sombre -->
     <color name="white">#FFFFFF</color> <!-- Fond légèrement atténué -->
+    <color name="darker_gray">#333333</color>
 </resources>
