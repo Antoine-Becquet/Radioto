@@ -7,11 +7,10 @@ pluginManagement {
     }
     resolutionStrategy {
         eachPlugin {
-            // Forcer l'utilisation d'AGP 8.6.0 (version compatible avec votre environnement)
             if (requested.id.id == "com.android.application") {
-                useVersion("8.6.0")
+                useVersion("8.9.2")
             }
-            // Forcer la version Kotlin Android (ajustez si nécessaire)
+            // Force la version Kotlin Android
             if (requested.id.id == "org.jetbrains.kotlin.android") {
                 useVersion("1.9.21")
             }
