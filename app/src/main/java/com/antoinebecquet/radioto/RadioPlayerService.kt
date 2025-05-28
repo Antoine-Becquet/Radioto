@@ -1,5 +1,6 @@
 package com.antoinebecquet.radioto
 
+import android.annotation.SuppressLint
 import android.app.PendingIntent
 import android.app.Service
 import android.content.Intent
@@ -39,6 +40,7 @@ class RadioPlayerService : MediaSessionService() {
     private lateinit var sharedPreferences: SharedPreferences
 
     private inner class CustomMediaSessionCallback : MediaSession.Callback {
+        @SuppressLint("UnsafeOptInUsageError")
         override fun onConnect(
             session: MediaSession,
             controller: MediaSession.ControllerInfo
