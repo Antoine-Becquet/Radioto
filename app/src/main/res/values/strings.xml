@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">Radioto</string>
+
+    <!-- Ces chaînes ne sont pas directement utilisées par PlayerControlView par défaut,
+         mais sont bonnes à garder si vous prévoyez d'ajouter des descriptions de contenu
+         ailleurs ou si vous revenez à un layout personnalisé. -->
+    <string name="previous_track_description">Piste précédente</string>
+    <string name="play_pause_description">Lire ou mettre en pause</string>
+    <string name="next_track_description">Piste suivante</string>
+
+    <!-- Utilisé dans item_station.xml (via StationAdapter) -->
     <string name="station_logo_desc">Logo de la station</string>
-    <string name="logo_station">Logo de la station en cours</string>
-    <string name="nom_de_la_station">Nom de la station</string>
-    <string name="desc_play">Bouton lecture/pause</string>
 </resources>

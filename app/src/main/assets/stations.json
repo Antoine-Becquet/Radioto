@@ -1,35 +1,42 @@
 [
   {
+    "id": "radio_france",
     "name": "Radio France",
     "streamUrl": "https://icecast.radiofrance.fr/franceculture-midfi.mp3",
     "logoResId": "radio_france_logo"
   },
   {
+    "id": "nrj",
     "name": "NRJ",
     "streamUrl": "https://scdn.nrjaudio.fm/adwz2/fr/30001/mp3_128.mp3",
     "logoResId": "nrj_logo"
   },
   {
+    "id": "fun_radio",
     "name": "Fun Radio",
     "streamUrl": "https://streaming.funradio.fr/fun.mp3",
     "logoResId": "fun_radio_logo"
   },
   {
+    "id": "skyrock",
     "name": "Skyrock",
     "streamUrl": "https://icecast.skyrock.net/s/natio_mp3_128k",
     "logoResId": "skyrock_logo"
   },
   {
+    "id": "tendance_ouest",
     "name": "Tendance Ouest",
     "streamUrl": "https://tendanceouest-cotentin.ice.infomaniak.ch/cherbourg.mp3",
     "logoResId": "tendance_logo"
   },
   {
+    "id": "rfm",
     "name": "RFM",
     "streamUrl": "https://rfm-live-mp3-128.scdn.arkena.com/rfm.mp3",
     "logoResId": "rfm_logo"
   },
   {
+    "id": "demo_radio",
     "name": "DEMO Radio",
     "streamUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
     "logoResId": "default_logo"

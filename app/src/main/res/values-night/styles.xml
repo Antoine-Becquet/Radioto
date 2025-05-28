@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
+
     <style name="Theme.Radioto" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Couleurs primaires -->
+        <!-- Ces items vont maintenant chercher les couleurs définies dans values-night/colors.xml -->
         <item name="colorPrimary">@color/purple_primary</item>
         <item name="colorOnPrimary">@color/on_primary_color</item>
         <item name="colorPrimaryContainer">@color/primary_container_color</item>
@@ -31,8 +33,11 @@
         <item name="colorOutline">@color/outline_color</item>
         <item name="colorOutlineVariant">@color/outline_variant_color</item>
 
-        <!-- Personnalisation de la barre d'état pour le MODE CLAIR -->
+        <!-- Personnalisation de la barre d'état pour le MODE NUIT -->
+        <!-- ?attr/colorSurface prendra la valeur de colorSurface du mode nuit -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorSurface</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <!-- false pour que les icônes de la barre d'état soient claires sur un fond sombre -->
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
     </style>
+
 </resources>

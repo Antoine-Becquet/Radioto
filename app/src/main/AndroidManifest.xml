@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.antoinebecquet.radioto">
 
     <!-- Permissions requises -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"/>
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+<uses-feature
+        android:name="android.hardware.type.automotive"
+        android:required="false" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,7 +21,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Radioto"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules">
 
         <activity
             android:name=".MainActivity"
@@ -28,7 +38,35 @@
         <service
             android:name=".RadioPlayerService"
             android:foregroundServiceType="mediaPlayback"
-            android:exported="false"
-            android:stopWithTask="false"/>
-    </application>
-</manifest>
+            android:exported="true"
+        android:stopWithTask="false">
+        <intent-filter>
+            <action android:name="androidx.media3.session.MediaSessionService"/>
+            <action android:name="android.media.browse.MediaBrowserService" />
+        </intent-filter>
+    </service>
+
+    <!-- Métadonnées pour Android Auto (si vous l'utilisez) -->
+    <!--
+    <meta-data
+        android:name="com.google.android.gms.car.application"
+        android:resource="@xml/automotive_app_desc" />
+    -->
+
+    <!-- Optionnel: Déclaration d'un MediaBrowserService pour Android Auto si RadioPlayerService ne suffit pas
+         ou si vous avez une structure de service séparée pour Auto.
+         Normalement, avec Media3, RadioPlayerService devrait suffire s'il est correctement configuré.
+    -->
+    <!--
+    <service
+        android:name=".YourCarMediaBrowserService" // Exemple, si vous en aviez un séparé
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.media.browse.MediaBrowserService"/>
+        </intent-filter>
+    </service>
+    -->
+
+</application>
+
+    </manifest>

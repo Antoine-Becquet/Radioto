@@ -1,12 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#121212</color> <!-- Fond sombre plus doux -->
-    <color name="white">#FFFFFF</color>
-    <color name="tile_background">#E0E0E0</color>
-    <color name="darker_gray">#333333</color> <!-- Ajuste la valeur selon tes besoins -->
+    <!-- Couleurs de base absolues -->
+    <color name="seed_black">#FF000000</color>
+    <color name="seed_white">#FFFFFFFF</color>
+
+    <!-- Palette de base (valeurs pour le mode clair) -->
+    <color name="purple_primary">#FF6200EE</color>
+    <color name="teal_secondary">#FF03DAC5</color>
+    <color name="red_error">#B00020</color>
+
+    <!-- Couleurs sémantiques pour le thème (valeurs pour le mode clair) -->
+    <color name="on_primary_color">@color/seed_white</color>
+    <color name="on_secondary_color">@color/seed_black</color>
+    <color name="on_error_color">@color/seed_white</color>
+
+    <color name="app_background">@color/seed_white</color>
+    <color name="on_background_color">@color/seed_black</color>
+    <color name="surface_color">@color/seed_white</color>
+    <color name="on_surface_color">@color/seed_black</color>
+
+    <!-- Couleurs de "container" (si vous les utilisez) -->
+    <color name="primary_container_color">#FFBB86FC</color>
+    <color name="on_primary_container_color">@color/seed_black</color>
+    <color name="secondary_container_color">#A0ECE2</color>
+    <color name="on_secondary_container_color">@color/seed_black</color>
+    <color name="error_container_color">#FDECEA</color>
+    <color name="on_error_container_color">@color/seed_black</color>
+
+    <!-- Variantes de surface et contours -->
+    <color name="surface_variant_color">#E0E0E0</color>
+    <color name="on_surface_variant_color">@color/seed_black</color>
+    <color name="outline_color">#757575</color>
+    <color name="outline_variant_color">#BDBDBD</color>
+
+    <color name="tile_highlight_text">@color/seed_black</color>
+
+    <!--  AUCUNE DÉFINITION DE <style name="Theme.Radioto" ...> ICI  -->
+
 </resources>

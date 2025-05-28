@@ -5,76 +5,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@android:color/white"> <!-- Ajout d'un fond blanc pour éviter l'écran noir -->
+    tools:context=".MainActivity">
 
     <!-- Liste des stations radio en mosaïque -->
-<androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/stationRecyclerView"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:background="@android:color/white"
-    app:layout_constraintBottom_toTopOf="@+id/playerBar"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    android:padding="8dp"/>
-
-    <!-- Barre du lecteur en bas -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/playerBar"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/stationRecyclerView"
         android:layout_width="0dp"
-        android:layout_height="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@android:color/darker_gray"
-        android:padding="10dp">
-
-        <!-- Logo de la station en cours -->
-        <ImageView
-            android:id="@+id/currentStationLogo"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/default_logo"
-            android:contentDescription="@string/logo_station"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-
-        <!-- Nom de la station en cours -->
-        <TextView
-            android:id="@+id/currentStationName"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/nom_de_la_station"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            app:layout_constraintStart_toEndOf="@id/currentStationLogo"
-            app:layout_constraintEnd_toStartOf="@id/playPauseButton"
-            app:layout_constraintTop_toTopOf="@id/currentStationLogo"
-            app:layout_constraintBottom_toBottomOf="@id/currentStationLogo"/>
-
-        <!-- Bouton Lecture/Pause -->
-        <ImageButton
-            android:id="@+id/playPauseButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:contentDescription="@string/desc_play"
-            android:src="@drawable/ic_play"
-            android:background="?attr/selectableItemBackground"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/currentStationLogo"
-            app:layout_constraintBottom_toBottomOf="@id/currentStationLogo"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!-- StyledPlayerView pour ExoPlayer -->
-<com.google.android.exoplayer2.ui.StyledPlayerView
-    android:id="@+id/playerControlView"
-    android:layout_width="0dp"
-    android:layout_height="120dp"
-    app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/playerControlView"
+    app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"/>
+    android:padding="8dp"
+    android:clipToPadding="false"
+    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+    app:spanCount="2"
+    tools:listitem="@layout/item_station"/>
+
+    <!-- Contrôles du lecteur Media3 en bas -->
+    <androidx.media3.ui.PlayerControlView
+        android:id="@+id/playerControlView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:show_timeout="0"
+    app:show_shuffle_button="false"
+    />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

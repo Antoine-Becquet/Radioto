@@ -1,9 +1,8 @@
 package com.antoinebecquet.radioto
 
-import com.google.gson.annotations.SerializedName
-
 data class RadioStation(
-    @SerializedName("name") val name: String,
-    @SerializedName("streamUrl") val streamUrl: String,
-    @SerializedName("logoResId") val logoResId: String
+    val id: String,
+    val name: String,
+    val streamUrl: String,
+    val logoResId: String,
 )

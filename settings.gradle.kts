@@ -8,7 +8,7 @@ pluginManagement {
     resolutionStrategy {
         eachPlugin {
             if (requested.id.id == "com.android.application") {
-                useVersion("8.9.2")
+                useVersion("8.10.0")
             }
             // Force la version Kotlin Android
             if (requested.id.id == "org.jetbrains.kotlin.android") {
