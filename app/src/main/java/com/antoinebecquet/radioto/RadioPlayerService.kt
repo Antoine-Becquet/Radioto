@@ -152,7 +152,7 @@ class RadioPlayerService : MediaSessionService() {
 
     private fun buildMediaItemsFromStations(): List<MediaItem> {
         return stations.map { station ->
-            val artworkUri = getUriForDrawable(station.logoResId)
+            val artworkUri = getUriForDrawable(station.iconUrl)
             MediaItem.Builder()
                 .setMediaId(station.id)
                 .setUri(station.streamUrl)

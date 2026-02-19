@@ -59,8 +59,6 @@ dependencies {
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("com.google.android.material:material:1.12.0")
-    implementation(libs.exoplayer.core)
-    implementation(libs.material)
 
     // Media3
     val media3Version = "1.2.0"
@@ -87,6 +85,10 @@ dependencies {
 
     // Dépendances Android Auto
     implementation("androidx.car.app:app:1.4.0")
+
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
     // Dépendances de test
     testImplementation("junit:junit:4.13.2")

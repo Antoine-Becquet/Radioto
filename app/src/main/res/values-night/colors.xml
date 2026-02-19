@@ -1,41 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Couleurs de base absolues (elles sont généralement dans values/colors.xml -->
-    <!-- et ne sont pas redéfinies ici, sauf si vous voulez qu'elles changent en mode nuit) -->
-    <!-- <color name="seed_black">#FF000000</color> -->
-    <!-- <color name="seed_white">#FFFFFFFF</color> -->
-
     <!-- Palette de base (VALEURS SPÉCIFIQUES POUR LE MODE NUIT) -->
-    <color name="purple_primary">#FFBB86FC</color> <!-- Exemple : Un violet plus clair pour le mode nuit -->
-    <color name="teal_secondary">#FF03DAC5</color>  <!-- Peut rester le même ou être ajusté -->
-    <color name="red_error">#CF6679</color>       <!-- Un rouge adapté au fond sombre -->
+    <color name="purple_primary">#FFBB86FC</color>
+    <color name="teal_secondary">#FF03DAC5</color>
+    <color name="red_error">#CF6679</color>
 
     <!-- Couleurs sémantiques "On" (texte/icônes sur les couleurs primaires/secondaires/etc.) -->
     <!-- Celles-ci dépendent des couleurs de base ci-dessus. -->
-    <!-- Souvent, sur des fonds sombres, on utilise du texte clair, mais cela dépend de vos couleurs primaires/secondaires. -->
-    <color name="on_primary_color">@color/seed_black</color>   <!-- Texte noir sur votre purple_primary de nuit -->
-    <color name="on_secondary_color">@color/seed_black</color> <!-- Texte noir sur votre teal_secondary de nuit -->
-    <color name="on_error_color">@color/seed_black</color>     <!-- Texte noir sur votre red_error de nuit -->
+    <color name="on_primary_color">@color/seed_black</color>
+    <color name="on_secondary_color">@color/seed_black</color>
+    <color name="on_error_color">@color/seed_black</color>
 
     <!-- Couleurs de fond et de surface pour le MODE NUIT -->
-    <color name="app_background">#121212</color>          <!-- Fond d'application sombre standard -->
-    <color name="on_background_color">@color/seed_white</color> <!-- Texte blanc sur fond sombre -->
-    <color name="surface_color">#1E1E1E</color>           <!-- Surface un peu plus claire que le fond -->
-    <color name="on_surface_color">@color/seed_white</color>  <!-- Texte blanc sur surface sombre -->
+    <color name="app_background">#121212</color>
+    <color name="on_background_color">@color/seed_white</color>
+    <color name="surface_color">#212121</color>
+    <color name="on_surface_color">@color/seed_white</color>
 
     <!-- Couleurs de "container" pour le MODE NUIT -->
-    <color name="primary_container_color">#38006E</color>      <!-- Conteneur sombre pour primary -->
-    <color name="on_primary_container_color">#EADDFF</color>   <!-- Texte clair sur primary_container_color -->
-    <color name="secondary_container_color">#004F48</color>    <!-- Conteneur sombre pour secondary -->
-    <color name="on_secondary_container_color">#A0ECE2</color> <!-- Texte clair sur secondary_container_color -->
-    <color name="error_container_color">#93000A</color>        <!-- Conteneur sombre pour error -->
-    <color name="on_error_container_color">#FFDAD6</color>     <!-- Texte clair sur error_container_color -->
+    <color name="primary_container_color">#38006E</color>
+    <color name="on_primary_container_color">#EADDFF</color>
+    <color name="secondary_container_color">#004F48</color>
+    <color name="on_secondary_container_color">#A0ECE2</color>
+    <color name="error_container_color">#93000A</color>
+    <color name="on_error_container_color">#FFDAD6</color>
 
     <!-- Variantes de surface et contours pour le MODE NUIT -->
-    <color name="surface_variant_color">#424242</color>       <!-- Variante de surface sombre -->
-    <color name="on_surface_variant_color">#BDBDBD</color>    <!-- Texte plus clair sur surface_variant_color -->
-    <color name="outline_color">#9E9E9E</color>              <!-- Contour visible sur fond sombre -->
-    <color name="outline_variant_color">#616161</color>        <!-- Variante de contour -->
+    <color name="surface_variant_color">#424242</color>
+    <color name="on_surface_variant_color">#BDBDBD</color>
+    <color name="outline_color">#9E9E9E</color>
+    <color name="outline_variant_color">#616161</color>
 
     <!-- Couleur spécifique pour le texte en surbrillance des tuiles (si utilisé) -->
     <color name="tile_highlight_text">@color/seed_white</color>

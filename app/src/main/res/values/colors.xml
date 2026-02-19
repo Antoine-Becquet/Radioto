@@ -4,37 +4,36 @@
     <color name="seed_black">#FF000000</color>
     <color name="seed_white">#FFFFFFFF</color>
 
-    <!-- Palette de base (valeurs pour le mode clair) -->
-    <color name="purple_primary">#FF6200EE</color>
-    <color name="teal_secondary">#FF03DAC5</color>
-    <color name="red_error">#B00020</color>
+    <!-- Palette de base (VALEURS SPÉCIFIQUES POUR LE MODE CLAIR) -->
+    <color name="purple_primary">#FF6200EE</color> <!-- Violet standard -->
+    <color name="teal_secondary">#FF03DAC6</color>  <!-- Turquoise standard -->
+    <color name="red_error">#B00020</color>       <!-- Rouge d'erreur standard -->
 
-    <!-- Couleurs sémantiques pour le thème (valeurs pour le mode clair) -->
-    <color name="on_primary_color">@color/seed_white</color>
-    <color name="on_secondary_color">@color/seed_black</color>
-    <color name="on_error_color">@color/seed_white</color>
+    <!-- Couleurs sémantiques "On" (texte/icônes sur les couleurs primaires/secondaires/etc.) -->
+    <color name="on_primary_color">@color/seed_white</color>   <!-- Texte blanc sur primaire -->
+    <color name="on_secondary_color">@color/seed_black</color> <!-- Texte noir sur secondaire -->
+    <color name="on_error_color">@color/seed_white</color>     <!-- Texte blanc sur erreur -->
 
-    <color name="app_background">@color/seed_white</color>
-    <color name="on_background_color">@color/seed_black</color>
-    <color name="surface_color">@color/seed_white</color>
-    <color name="on_surface_color">@color/seed_black</color>
+    <!-- Couleurs de fond et de surface pour le MODE CLAIR -->
+    <color name="app_background">#FFFFFFFF</color>          <!-- Fond d'application blanc -->
+    <color name="on_background_color">@color/seed_black</color> <!-- Texte noir sur fond blanc -->
+    <color name="surface_color">#FFFFFFFF</color>           <!-- Surface blanche -->
+    <color name="on_surface_color">@color/seed_black</color>  <!-- Texte noir sur surface blanche -->
 
-    <!-- Couleurs de "container" (si vous les utilisez) -->
-    <color name="primary_container_color">#FFBB86FC</color>
-    <color name="on_primary_container_color">@color/seed_black</color>
-    <color name="secondary_container_color">#A0ECE2</color>
-    <color name="on_secondary_container_color">@color/seed_black</color>
-    <color name="error_container_color">#FDECEA</color>
-    <color name="on_error_container_color">@color/seed_black</color>
+    <!-- Couleurs de "container" pour le MODE CLAIR -->
+    <color name="primary_container_color">#FFBBDEFB</color>   <!-- Conteneur clair pour primaire -->
+    <color name="on_primary_container_color">#FF001D36</color> <!-- Texte sombre sur primary_container_color -->
+    <color name="secondary_container_color">#FFDDEFEF</color>  <!-- Conteneur clair pour secondaire -->
+    <color name="on_secondary_container_color">#FF002022</color> <!-- Texte sombre sur secondary_container_color -->
+    <color name="error_container_color">#FFFFDAD6</color>      <!-- Conteneur clair pour erreur -->
+    <color name="on_error_container_color">#FF410002</color>   <!-- Texte sombre sur error_container_color -->
 
-    <!-- Variantes de surface et contours -->
-    <color name="surface_variant_color">#E0E0E0</color>
-    <color name="on_surface_variant_color">@color/seed_black</color>
-    <color name="outline_color">#757575</color>
-    <color name="outline_variant_color">#BDBDBD</color>
+    <!-- Variantes de surface et contours pour le MODE CLAIR -->
+    <color name="surface_variant_color">#FFE0E0E0</color>     <!-- Variante de surface claire -->
+    <color name="on_surface_variant_color">#FF424242</color>  <!-- Texte plus sombre sur surface_variant_color -->
+    <color name="outline_color">#FF757575</color>            <!-- Contour visible sur fond clair -->
+    <color name="outline_variant_color">#FFBDBDBD</color>      <!-- Variante de contour -->
 
+    <!-- Couleur spécifique pour le texte en surbrillance des tuiles (si utilisé) -->
     <color name="tile_highlight_text">@color/seed_black</color>
-
-    <!--  AUCUNE DÉFINITION DE <style name="Theme.Radioto" ...> ICI  -->
-
 </resources>
